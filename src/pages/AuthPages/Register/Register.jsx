@@ -3,7 +3,7 @@ import { Eye, EyeOff } from "lucide-react";
 import bg from "../../assets/bg_image.png";
 import logo from "../../assets/logo.png";
 import google from "../../assets/google.svg";
-import styles from "./../Login/Login.module.css";
+import styles from "../AuthPages/Login/Login.module.css";
 
 const Register = () => {
     const [userType, setUserType] = useState("owner");
