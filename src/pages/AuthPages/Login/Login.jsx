@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Eye, EyeOff, RefreshCcw } from "lucide-react";
-import bg from "../../assets/bg_image.png";
-import logo from "../../assets/logo.png";
-import google from "../../assets/google.svg";
+import bg from "../../../assets/bg_image.png";
+import logo from "../../../assets/logo.png";
+import google from "../../../assets/google.svg";
 import styles from "./Login.module.css";
 
 const Login = () => {

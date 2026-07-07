@@ -1,16 +1,26 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import AuthRoutes from "./routes/AuthRoutes";
-
+import Login from "./pages/AuthPages/Login/Login";
+import Register from "./pages/AuthPages/Register/Register";
+import CustomerDashboard from "./pages/Customer/CustomerDashboard/CustomerDashboard";
 
 function App() {
   return (
-    <Routes>
+    <>
+      <Routes>
 
-      {/* Authentication */}
-      <Route path="/*" element={<AuthRoutes />} />
+        {/* Auth */}
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
-    </Routes>
+        {/* Customer */}
+        <Route
+          path="/customer/dashboard"
+          element={<CustomerDashboard />}
+        />
+
+      </Routes>
+    </>
   );
 }
 
