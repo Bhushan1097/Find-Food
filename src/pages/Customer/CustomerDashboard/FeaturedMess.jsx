@@ -63,14 +63,14 @@ export default function FeaturedMess() {
 
     return (
         <>
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-5">
+            <section className="py-10 bg-gray-50">
+                <div className="max-w-7xl mx-auto ">
 
-                    <h2 className="text-4xl font-bold mb-3">
+                    <h2 className="text-4xl font-weight-500 mb-3">
                         Featured Mess Near You
                     </h2>
 
-                    <p className="text-gray-500 mb-10">
+                    <p className="color-[#2E2E2E] mb-10">
                         Fresh homemade food from trusted mess owners
                     </p>
 

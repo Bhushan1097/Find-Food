@@ -20,7 +20,7 @@ const MessCard = ({
     onMenuClick,
 }) => {
     return (
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+        <div className="bg-white w-[412px] h-[520px] rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
 
             {/* Image */}
             <div className="p-4 pb-0">
@@ -107,7 +107,7 @@ const MessCard = ({
                 </div>
 
                 {/* Button */}
-                <div className="flex justify-end mt-6">
+                <div className="flex justify-end mt-3">
                     <button
                         onClick={onMenuClick}
                         className="bg-[#D86E49] hover:bg-[#c95f3b] text-white rounded-lg px-5 py-2.5 flex items-center gap-2 text-sm font-medium transition-all"

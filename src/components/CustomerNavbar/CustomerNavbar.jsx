@@ -17,8 +17,8 @@ const CustomerNavbar = () => {
                 <img
                     src={logo}
                     alt="Find Food"
-                    className="w-24 md:w-28 cursor-pointer"
-                    onClick={() => navigate("/")}
+                    className="w-[93px] md:w-28 cursor-pointer"
+                    onClick={() => navigate("/customer/dashboard")}
                 />
 
                 {/* Desktop Menu */}
@@ -49,7 +49,7 @@ const CustomerNavbar = () => {
                     <FaHeart className="text-xl cursor-pointer hover:text-red-500 transition" />
 
                     <button
-                        onClick={() => navigate("/login")}
+                        onClick={() => navigate("/")}
                         className="flex items-center gap-2 bg-[#D85C39] text-white px-5 py-2 rounded-lg hover:bg-[#bf4f30] transition"
                     >
                         <FaUser />

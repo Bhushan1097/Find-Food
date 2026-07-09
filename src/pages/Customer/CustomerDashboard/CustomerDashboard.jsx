@@ -7,15 +7,17 @@ import Footer from "../../../components/Footer/Footer";
 const CustomerDashboard = () => {
     return (
         <>
-            <CustomerNavbar />
-
-            <Hero />
-
+            <div>
+                <CustomerNavbar />
+            </div>
+            <div>
+                <Hero />
+            </div>
             <Features />
 
-            <FeaturedMess/>
+            <FeaturedMess />
 
-            <Footer/>
+            <Footer />
 
         </>
     );

@@ -11,31 +11,30 @@ const Hero = () => {
 
     return (
         <>
-            <section className="relative bg-[#D9532A] overflow-hidden min-h-[500px] lg:h-[430px]">
+            <section className="relative w-full h-[540px] bg-[#DC4924] overflow-hidden mx-auto">
 
                 {/* Left Image */}
                 <img
                     src={heroLeft}
                     alt=""
-                    className="absolute bottom-0 -left-40 lg:-left-56 w-[420px] lg:w-[500px] pointer-events-none select-none"
+                    className="absolute top-1/2 -translate-y-1/2 -left-40 lg:-left-56 w-[400px] lg:w-[573px] pointer-events-none select-none"
                 />
 
                 {/* Right Image */}
                 <img
                     src={heroRight}
                     alt=""
-                    className="absolute bottom-0 -right-40 lg:-right-56 w-[420px] lg:w-[500px] pointer-events-none select-none"
+                    className="absolute top-1/2 -translate-y-1/2 -right-40 lg:-right-56 w-[420px] lg:w-[599px] pointer-events-none select-none"
                 />
-
                 {/* Content */}
 
                 <div className="relative z-20 max-w-7xl mx-auto flex flex-col justify-center items-center h-full px-5 py-16 text-white">
 
-                    <h1 className="text-5xl font-bold text-center">
+                    <h1 className="text-4xl font-bold text-center">
                         Taste of Home, Delivered
                     </h1>
 
-                    <h2 className="text-5xl font-bold mt-2 text-center">
+                    <h2 className="text-4xl font-bold mt-2 text-center">
                         Discover authentic home-cooked meals
                     </h2>
 
@@ -45,7 +44,7 @@ const Hero = () => {
 
                         {/* Location */}
 
-                        <div className="w-[280px] h-[58px] bg-white rounded-xl flex items-center px-5 shadow-lg">
+                        <div className="w-[329px] h-[63px] bg-white rounded-xl flex items-center px-5 shadow-lg">
 
                             <FaMapMarkerAlt className="text-[#D9532A] text-xl" />
 
@@ -58,7 +57,7 @@ const Hero = () => {
 
                         {/* Search */}
 
-                        <div className="w-[430px] h-[58px] bg-white rounded-xl flex items-center shadow-lg overflow-hidden">
+                        <div className="w-[484px] h-[63px] bg-white rounded-xl flex items-center shadow-lg overflow-hidden">
 
                             <div className="flex items-center flex-1 px-5">
 
