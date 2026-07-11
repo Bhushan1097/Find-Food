@@ -16,7 +16,7 @@ const Footer = () => {
             {/* Footer Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
                     {/* Logo */}
                     <div>
@@ -37,7 +37,7 @@ const Footer = () => {
                     {/* Customers */}
                     <div>
 
-                        <h2 className="text-4xl font-bold text-[#222] mb-8">
+                        <h2 className="text-2xl font-bold text-[#222] mb-8">
                             For Customers
                         </h2>
 
@@ -62,7 +62,7 @@ const Footer = () => {
                     {/* Owner */}
                     <div>
 
-                        <h2 className="text-4xl font-bold text-[#222] mb-8">
+                        <h2 className="text-2xl font-bold text-[#222] mb-8">
                             For Mess Owner
                         </h2>
 
@@ -87,7 +87,7 @@ const Footer = () => {
                     {/* Support */}
                     <div>
 
-                        <h2 className="text-4xl font-bold text-[#222] mb-8">
+                        <h2 className="text-2xl font-bold text-[#222] mb-8">
                             Support
                         </h2>
 

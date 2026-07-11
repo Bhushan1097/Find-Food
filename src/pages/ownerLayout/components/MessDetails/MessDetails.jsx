@@ -1,7 +1,7 @@
-import FileUpload from "../../../../../components/OwnerForm/FileUpload";
-import FoodTypeSelector from "../../../../../components/OwnerForm/FoodTypeSelector";
-import ImageUpload from "../../../../../components/OwnerForm/ImageUpload";
-import InputField from "../../../../../components/OwnerForm/InputField";
+import FileUpload from "../../../../components/OwnerForm/FileUpload";
+import FoodTypeSelector from "../../../../components/OwnerForm/FoodTypeSelector";
+import ImageUpload from "../../../../components/OwnerForm/ImageUpload";
+import InputField from "../../../../components/OwnerForm/InputField";
 
 const MessDetails = () => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TimeDetails = () => {
+const TimeData = () => {
   return (
     <div>TimeDetails</div>
   )
 }
 
-export default TimeDetails
+export default TimeData

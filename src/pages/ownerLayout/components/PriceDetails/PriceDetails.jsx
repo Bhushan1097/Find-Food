@@ -1,5 +1,5 @@
 import React from "react";
-import InputField from "../../../../../components/OwnerForm/InputField";
+import InputField from "../../../../components/OwnerForm/InputField";
 
 const PriceDetails = () => {
   return (
