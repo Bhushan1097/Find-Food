@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DayAccordion from "../../../../components/OwnerForm/DayAccordin";
 import styles from "./MenuDetails.module.css";
+import DayAccordion from "../../../../components/OwnerForm/DayAccordion";
 
 const days = [
   "Monday",

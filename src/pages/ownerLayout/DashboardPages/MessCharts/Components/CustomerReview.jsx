@@ -11,7 +11,7 @@ const ratingData = [
 
 const CustomerReview = () => {
   return (
-    <div className="w-[20rem] h-[22rem] rounded-2xl border border-gray-300 bg-white shadow-md overflow-hidden">
+    <div className="w-[22rem] h-[22rem] rounded-2xl border border-gray-300 bg-white shadow-md overflow-hidden">
 
       {/* Header */}
       <div className="py-3 text-center shadow-[0px_1px_3px_0px_#00000026]">

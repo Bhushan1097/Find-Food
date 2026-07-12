@@ -15,7 +15,7 @@ const COLORS = ["#6C63FF", "#FF7D7D"];
 
 const FoodPreferenceChart = () => {
   return (
-    <div className="w-[20rem] h-[22rem] rounded-2xl border border-gray-300 bg-white shadow-md overflow-hidden">
+    <div className="w-88 h-88 rounded-2xl border border-gray-300 bg-white shadow-md overflow-hidden">
 
       {/* Header */}
 

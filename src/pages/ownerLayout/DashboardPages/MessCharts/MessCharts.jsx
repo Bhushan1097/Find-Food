@@ -8,11 +8,11 @@ const MessCharts = () => {
   return (
     <>
       <div>
-        <div className="flex w-full gap-4 items-stretch">
+        <div className="flex w-full gap-4 justify-evenly   items-stretch">
           <CustomerReview />
           <FoodPreferenceChart />
 
-          <div className="w-[20rem] h-88 rounded-2xl border border-gray-300 bg-white shadow-md">
+          <div className="w-[22rem] h-88 rounded-2xl border border-gray-300 bg-white shadow-md">
             <div className="py-3 text-center shadow-[0px_1px_3px_0px_#00000026]">
               <h2 className="text-xl font-semibold">Total Views</h2>
             </div>

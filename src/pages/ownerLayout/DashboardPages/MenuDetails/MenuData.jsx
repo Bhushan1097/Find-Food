@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DayAccordion from "../../../../components/OwnerForm/DayAccordin";
+import MenuDayAccordion from "../MenuDetails/Components/MenuDayAccordion";
 
 const days = [
   "Monday",
@@ -135,7 +135,7 @@ const MenuData = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="space-y-6 w-full mt-6 flex flex-col gap-4 p-8 bg-[#FEFBFA] rounded-xl border-[#767676] shadow-[0px_1px_3px_0px_#0000004D,0px_4px_8px_3px_#00000026]">
       {/* Meal Toggle */}
 
       <div className="flex justify-between items-center mb-6">
@@ -182,7 +182,7 @@ const MenuData = () => {
 
       {/* Accordion */}
 
-      <DayAccordion
+      <MenuDayAccordion
         days={days}
         expandedDays={expandedDays}
         setExpandedDays={setExpandedDays}

@@ -14,7 +14,7 @@ const OwnerDashboard = () => {
       <main className="flex min-h-screen">
         <Sidebar />
 
-        <section className="flex-1 p-6 flex flex-col gap-3 overflow-x-auto">
+        <section className="flex-1 p-8 flex flex-col gap-6 overflow-x-auto">
           <h1 className="text-6xl">Good Morning, Joe!</h1>
           <h1>It's time to track your finance and services.</h1>
 
