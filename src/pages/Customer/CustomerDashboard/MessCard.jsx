@@ -18,6 +18,7 @@ const MessCard = ({
     dinner,
     phone,
     onMenuClick,
+    onRatingClick,
 }) => {
     return (
         <div className="bg-white w-[412px] h-[520px] rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
@@ -47,8 +48,11 @@ const MessCard = ({
                 {/* Rating */}
                 <div className="flex items-center justify-between mt-4">
 
-                    <div className="flex items-center gap-2">
-
+                    {/* Clickable Rating */}
+                    <button
+                        onClick={onRatingClick}
+                        className="flex items-center gap-2"
+                    >
                         <div className="flex text-yellow-400 text-sm">
                             <FaStar />
                             <FaStar />
@@ -57,13 +61,12 @@ const MessCard = ({
                             <FaStar className="text-yellow-300" />
                         </div>
 
-                        <div className="bg-gray-100 px-2 py-1 rounded-md text-xs font-semibold">
+                        <div className="bg-gray-100 px-2 py-1 rounded-md text-xs font-semibold hover:bg-[#D9532A] hover:text-white transition">
                             {rating} | {reviews}
                         </div>
+                    </button>
 
-                    </div>
-
-                    {/* Veg / Non-Veg */}
+                    {/* Veg / Non Veg */}
                     <div className="flex gap-2">
 
                         <div className="w-5 h-5 border border-green-600 rounded-sm bg-green-100 flex justify-center items-center">
@@ -75,6 +78,7 @@ const MessCard = ({
                         </div>
 
                     </div>
+
                 </div>
 
                 {/* Address */}

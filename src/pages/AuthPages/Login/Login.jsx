@@ -14,6 +14,15 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [userType, setUserType] = useState("customer");
 
+    // Handle Login Navigation
+    const handleLogin = () => {
+        if (userType === "owner") {
+            navigate("/ownerForm/messDetails");
+        } else {
+            navigate("/customer/dashboard");
+        }
+    };
+
     return (
         <div
             className={`min-w-screen min-h-screen flex items-center justify-center px-4 ${styles.background}`}
@@ -34,14 +43,14 @@ const Login = () => {
 
                 {/* Heading */}
                 <h1 className={styles.heading}>
-                    Welcome Back !
+                    Welcome Back!
                 </h1>
 
                 <p className={styles.subHeading}>
                     Sign in to your account
                 </p>
 
-                {/* Toggle */}
+                {/* User Type Toggle */}
                 <div className={styles.toggleContainer}>
 
                     <button
@@ -97,7 +106,7 @@ const Login = () => {
                         <input
                             type={showPassword ? "text" : "password"}
                             placeholder="********"
-                        className={`p-5 ${styles.input}`}
+                            className={`p-5 ${styles.input}`}
                         />
 
                         <button
@@ -133,10 +142,11 @@ const Login = () => {
                         placeholder="Enter Captcha"
                     />
 
-                    <button className="w-12 h-12 flex items-center justify-center">
-
+                    <button
+                        type="button"
+                        className="w-12 h-12 flex items-center justify-center"
+                    >
                         <RefreshCcw size={20} />
-
                     </button>
 
                     <div className={styles.captchaText}>
@@ -148,7 +158,7 @@ const Login = () => {
                 {/* Login Button */}
                 <button
                     className={styles.loginBtn}
-                    onClick={() => navigate("/customer/dashboard")}
+                    onClick={handleLogin}
                 >
                     Login
                 </button>
@@ -166,7 +176,7 @@ const Login = () => {
 
                 </div>
 
-                {/* Google */}
+                {/* Google Login */}
                 <button className={styles.googleBtn}>
 
                     <img

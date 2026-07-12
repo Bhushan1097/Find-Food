@@ -19,19 +19,18 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-14">
 
                     {/* Logo */}
-                    <div>
+                    <div className="lg:col-span-2">
                         <img
                             src={logo}
                             alt="Find Food"
-                            className="w-36 "
+                            className="w-36"
                         />
 
-                        <p className="font-poppins font-normal text-[14px] leading-[180%] text-gray-700 max-w-xs">
+                        <p className="font-poppins font-normal text-[14px] leading-[180%] text-gray-700 max-w-sm mt-2">
                             Connecting you with authentic home-cooked meals from verified
                             local chefs.
                         </p>
                     </div>
-                    <div className="w-[50px]"></div>
 
                     {/* Customers */}
                     <div>
