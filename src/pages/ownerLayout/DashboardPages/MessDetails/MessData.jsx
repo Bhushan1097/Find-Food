@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState} from "react";
 import ImageGallery from "./Components/ImageGallery";
 import InputField from "../../../../components/OwnerForm/InputField";
 import FileUpload from "../../../../components/OwnerForm/FileUpload";
@@ -7,6 +7,16 @@ import ImageUpload from "../../../../components/OwnerForm/ImageUpload";
 import EditButton from "../Components/EditButton";
 
 const MessData = () => {
+  const [isEdit, setIsEdit] = useState(false);
+
+  const handleSave = () => {
+    // API Call
+    setIsEdit(false);
+  };
+
+  const handleEdit = () => {
+    setIsEdit(true);
+  };
   return (
     <div className="space-y-6 w-full mt-6 flex flex-col gap-4 p-8 bg-[#FEFBFA] rounded-xl border-[#767676] shadow-[0px_1px_3px_0px_#0000004D,0px_4px_8px_3px_#00000026]">
       <div>
@@ -41,12 +51,9 @@ const MessData = () => {
           </div>
 
           <div className="mt-5">
-              <label className="font-medium">Landmark</label>
+            <label className="font-medium">Landmark</label>
 
-            <InputField
-            className="w-full"
-            placeholder="Add nearby landmark*"
-          />
+            <InputField className="w-full" placeholder="Add nearby landmark*" />
           </div>
         </div>
 
@@ -54,7 +61,6 @@ const MessData = () => {
 
         <h1 className="text-3xl mb-3 font-medium">Contact</h1>
         <div className="grid grid-cols-2 gap-4">
-
           <div>
             <label className="font-medium">Contact</label>
             <InputField placeholder="Mobile number*" />
@@ -88,10 +94,8 @@ const MessData = () => {
         </div>
 
         {/* Image Upload */}
-
-      
       </form>
-      <EditButton />
+      <EditButton isEdit={isEdit} onSave={handleSave} onEdit={handleEdit} />
     </div>
   );
 };

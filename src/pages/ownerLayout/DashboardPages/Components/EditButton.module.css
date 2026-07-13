@@ -1,0 +1,45 @@
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.saveBtn,
+.editBtn {
+  min-width: 120px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.saveBtn {
+  background: #22bb33;
+}
+
+.saveBtn:hover {
+  background: #189b28;
+}
+
+.editBtn {
+  background: #c85a3e;
+}
+
+.editBtn:hover {
+  background: #b14d33;
+}
+
+@media (max-width: 768px) {
+  .buttonContainer {
+    justify-content: center;
+  }
+
+  .saveBtn,
+  .editBtn {
+    width: 100%;
+  }
+}

@@ -1,14 +1,18 @@
 import React from "react";
+import styles from "./EditButton.module.css";
 
-const EditButton = () => {
+const EditButton = ({ isEdit, onSave, onEdit }) => {
   return (
-    <div className="flex items-center gap-5 justify-end">
-      <button className="w-25 h-10 bg-[#C85A3E] py-2 text-white font-semibold rounded-xl shadow-[0px_1px_3px_1px_#00000026,0px_1px_2px_0px_#0000004D] ">
-        Edit
-      </button>
-      <button className="w-25 h-10 bg-[#22BB33] py-2 text-white font-semibold rounded-xl shadow-[0px_1px_3px_1px_#00000026,0px_1px_2px_0px_#0000004D] ">
-        Save
-      </button>
+    <div className={styles.buttonContainer}>
+      {isEdit ? (
+        <button onClick={onSave} className={styles.saveBtn}>
+          Save
+        </button>
+      ) : (
+        <button onClick={onEdit} className={styles.editBtn}>
+          Edit
+        </button>
+      )}
     </div>
   );
 };
