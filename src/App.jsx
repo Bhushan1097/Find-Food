@@ -18,6 +18,7 @@ import MenuData from "./pages/ownerLayout/DashboardPages/MenuDetails/MenuData";
 import PriceData from "./pages/ownerLayout/DashboardPages/PriceDetails/PriceData";
 import TimeData from "./pages/ownerLayout/DashboardPages/TimeDetails/TimeData";
 import FeedbackData from "./pages/ownerLayout/DashboardPages/FeedbackDetails/FeedbackData";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         {/* Auth */}
         <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* Customer */}
@@ -49,6 +51,10 @@ function App() {
           <Route path="timeData" element={<TimeData />} />
           <Route path="feedbackData" element={<FeedbackData />} />
         </Route>
+
+        {/* 404 Page */}
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
     </>
   );

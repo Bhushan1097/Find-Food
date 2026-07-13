@@ -7,12 +7,14 @@ import {
     FaStar,
 } from "react-icons/fa";
 
+import mess1 from "../../../assets/mess1.jpg";
+
 export default function MessDetailsCard({ mess, onClose }) {
     return (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex justify-end">
 
-            <div className="relative w-full max-w-5xl bg-white h-screen overflow-y-auto">
-                {/* Close */}
+            {/* Right Side Drawer */}
+            <div className="relative w-full md:w-[70%] lg:w-[50%] bg-white h-screen overflow-y-auto shadow-2xl">
 
                 {/* Close Button */}
                 <button
@@ -22,41 +24,33 @@ export default function MessDetailsCard({ mess, onClose }) {
                     <FaTimes className="text-lg text-gray-700" />
                 </button>
 
-                {/* Hero */}
-
+                {/* Hero Section */}
                 <div className="relative">
-
                     <img
                         src={mess.image}
+                        alt={mess.title}
                         className="w-full h-64 object-cover"
-                        alt=""
                     />
 
                     <div className="absolute bottom-8 left-6 text-white">
-
                         <div className="flex items-center gap-3">
-
                             <h1 className="text-5xl font-bold">
                                 {mess.title}
                             </h1>
 
-                            <FaHeart className="text-red-500 text-3xl" />
-
+                            <FaHeart className="text-red-500 text-3xl cursor-pointer" />
                         </div>
 
                         <p className="text-xl mt-2">
                             {mess.category}
                         </p>
-
                     </div>
-
                 </div>
 
-                {/* Info */}
-
+                {/* Information */}
                 <div className="p-8">
 
-                    <div className="grid grid-cols-4 gap-5">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 
                         <Card
                             title="Timing"
@@ -83,7 +77,7 @@ export default function MessDetailsCard({ mess, onClose }) {
 
                     </div>
 
-                    <div className="grid grid-cols-2 gap-5 mt-5">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
 
                         <Card
                             title="Address"
@@ -98,7 +92,7 @@ export default function MessDetailsCard({ mess, onClose }) {
 
                     </div>
 
-                    <h2 className="text-5xl font-bold mt-10 mb-6">
+                    <h2 className="text-4xl font-bold mt-10 mb-6">
                         Today's Menu
                     </h2>
 
@@ -117,6 +111,7 @@ export default function MessDetailsCard({ mess, onClose }) {
                 </div>
 
             </div>
+
         </div>
     );
 }
@@ -125,12 +120,12 @@ function Card({ title, value, icon }) {
     return (
         <div className="bg-[#F7EEEA] rounded-xl p-5">
 
-            <div className="text-[#D86E49] flex items-center gap-2">
+            <div className="text-[#D86E49] flex items-center gap-2 text-lg font-medium">
                 {icon}
                 {title}
             </div>
 
-            <div className="font-semibold mt-3">
+            <div className="font-semibold mt-3 text-gray-700">
                 {value}
             </div>
 
@@ -145,20 +140,18 @@ function MealCard({ evening }) {
             <div className="flex items-center gap-6">
 
                 <img
-                    src="/food.jpg"
+                    src={mess1}
+                    alt="Food"
                     className="w-28 h-28 rounded-full object-cover"
-                    alt=""
                 />
 
                 <div>
 
                     <h3 className="text-2xl font-bold">
-
                         {evening ? "Evening Meal" : "Morning Meal"}
-
                     </h3>
 
-                    <div className="flex gap-3 mt-4">
+                    <div className="flex flex-wrap gap-3 mt-4">
 
                         <span className="bg-white px-4 py-2 rounded-lg">
                             Chapati
@@ -173,7 +166,7 @@ function MealCard({ evening }) {
                         </span>
 
                         <span className="bg-white px-4 py-2 rounded-lg">
-                            Bhedi
+                            Bhendi
                         </span>
 
                     </div>
@@ -182,7 +175,7 @@ function MealCard({ evening }) {
 
             </div>
 
-            <div className="text-5xl font-bold">
+            <div className="text-4xl font-bold text-[#D86E49]">
                 ₹60
             </div>
 
