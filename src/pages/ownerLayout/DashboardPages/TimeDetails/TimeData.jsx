@@ -14,6 +14,17 @@ const TimeDetails = () => {
     holiday: "Monday",
   });
 
+  const [isEdit, setIsEdit] = useState(false);
+
+  const handleSave = () => {
+    // API Call
+    setIsEdit(false);
+  };
+
+  const handleEdit = () => {
+    setIsEdit(true);
+  };
+
   return (
     <div className="space-y-6 w-full mt-6 flex flex-col gap-4 p-8 bg-[#FEFBFA] rounded-xl border-[#767676] shadow-[0px_1px_3px_0px_#0000004D,0px_4px_8px_3px_#00000026]">
       {/* Morning */}
@@ -130,7 +141,7 @@ const TimeDetails = () => {
         </select>
       </div>
 
-    <EditButton/>
+      <EditButton isEdit={isEdit} onSave={handleSave} onEdit={handleEdit} />
     </div>
   );
 };

@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.topCards {
+  display: flex;
+  gap: 1rem;
+
+  justify-content: space-between;
+  align-items: stretch;
+
+  flex-wrap: wrap;
+}
+
+.totalViewCard {
+  width: 22rem;
+  height: 22rem;
+
+  background: #fff;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 1rem;
+
+  overflow: hidden;
+
+  box-shadow: 0px 1px 3px 0px #00000026;
+}
+
+.cardHeader {
+  padding: 0.9rem;
+
+  text-align: center;
+
+  box-shadow: 0px 1px 3px 0px #00000026;
+}
+
+.cardHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.cardBody {
+  height: calc(100% - 58px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cardBody h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+
+  color: #222;
+}
+
+.viewIcon {
+  width: 4.5rem;
+  object-fit: contain;
+}
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+  .topCards {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .topCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .totalViewCard {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .cardBody h1 {
+    font-size: 3rem;
+  }
+
+  .viewIcon {
+    width: 4rem;
+  }
+}

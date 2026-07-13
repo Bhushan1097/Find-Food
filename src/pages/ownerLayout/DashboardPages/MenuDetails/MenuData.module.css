@@ -1,0 +1,117 @@
+.container {
+  padding: 2rem;
+
+  background: #fefbfa;
+
+  border: 1px solid #767676;
+  border-radius: 1rem;
+
+  box-shadow:
+    0px 1px 3px 0px #0000004d,
+    0px 4px 8px 3px #00000026;
+}
+
+/* Meal Buttons */
+
+.mealButton,
+.activeMealButton {
+  padding: 0.65rem 1.6rem;
+
+  border-radius: 0.5rem;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.mealButton {
+  background: #f0f0f0;
+  border: 1px solid #cfcfcf;
+}
+
+.mealButton:hover {
+  background: #e8e8e8;
+}
+
+.activeMealButton {
+  background: #c85a3e;
+  color: #ffffff;
+}
+
+/* Top Buttons */
+
+.primaryButton,
+.secondaryButton,
+.saveButton,
+.editButton {
+  padding: 0.65rem 1.6rem;
+
+  border-radius: 0.5rem;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.primaryButton {
+  background: #c85a3e;
+  color: #ffffff;
+}
+
+.primaryButton:hover {
+  background: #b84c31;
+}
+
+.secondaryButton {
+  background: #ffffff;
+  border: 1px solid #6e6e6e;
+}
+
+.secondaryButton:hover {
+  background: #f6f6f6;
+}
+
+.saveButton {
+  background: #22bb33;
+  color: #ffffff;
+}
+
+.saveButton:hover {
+  background: #179726;
+}
+
+.editButton {
+  background: #c85a3e;
+  color: #ffffff;
+}
+
+.editButton:hover {
+  background: #b84c31;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  .mealButton,
+  .activeMealButton,
+  .primaryButton,
+  .secondaryButton,
+  .saveButton,
+  .editButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .label {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .label {
+    font-size: 0.9rem;
+  }
+}

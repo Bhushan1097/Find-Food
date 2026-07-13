@@ -38,7 +38,7 @@ const OwnerNavbar = () => {
 
                 {/* Desktop Right */}
                 <div className="hidden lg:flex items-center gap-6">
-                    <FaHeart className="text-xl cursor-pointer hover:text-red-500 transition" />
+                    {/* <FaHeart className="text-xl cursor-pointer hover:text-red-500 transition" /> */}
 
                     <button className="flex items-center gap-2 bg-[#D85C39] text-white px-5 py-2 rounded-lg hover:bg-[#bf4f30] transition">
                         <FaUser />

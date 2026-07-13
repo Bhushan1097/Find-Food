@@ -1,0 +1,10 @@
+.sidebar {
+  background: #f9eeeb;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    min-height: auto;
+  }
+}

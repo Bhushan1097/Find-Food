@@ -1,0 +1,69 @@
+.pageButton,
+.activePage,
+.arrowButton {
+  width: 2.2rem;
+  height: 2.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.pageButton {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #444444;
+}
+
+.pageButton:hover {
+  border-color: #c85a3e;
+  color: #c85a3e;
+}
+
+.activePage {
+  background: #c85a3e;
+  color: #ffffff;
+  border: 1px solid #c85a3e;
+}
+
+.arrowButton {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #444444;
+}
+
+.arrowButton:hover:not(:disabled) {
+  border-color: #c85a3e;
+  color: #c85a3e;
+}
+
+.arrowButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .pageButton,
+  .activePage,
+  .arrowButton {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageButton,
+  .activePage,
+  .arrowButton {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+}

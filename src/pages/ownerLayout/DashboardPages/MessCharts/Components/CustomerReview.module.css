@@ -1,0 +1,167 @@
+.container {
+  width: 22rem;
+  height: 22rem;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+  border-radius: 1rem;
+
+  box-shadow: 0px 1px 3px 0px #00000026;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 0.9rem;
+
+  text-align: center;
+
+  box-shadow: 0px 1px 3px 0px #00000026;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ratingSection {
+  width: 100%;
+
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0px 1px 3px 0px #00000026;
+}
+
+.ratingValue {
+  width: 3.5rem;
+
+  text-align: center;
+
+  border-right: 1px solid #d9d9d9;
+}
+
+.ratingValue h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ratingInfo {
+  padding-left: 1rem;
+}
+
+.ratingInfo svg {
+  color: #facc15;
+  font-size: 1.1rem;
+}
+
+.ratingInfo p {
+  margin-top: 0.5rem;
+
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.progressBackground {
+  flex: 1;
+
+  height: 0.65rem;
+
+  background: #e5e7eb;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+
+  border-radius: inherit;
+}
+
+.starCount {
+  width: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  font-size: 0.8rem;
+}
+
+.starIcon {
+  color: #facc15;
+  font-size: 0.8rem;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+.green {
+  background: #22c55e;
+}
+
+.yellow {
+  background: #facc15;
+}
+
+.orange {
+  background: #fb923c;
+}
+
+.red {
+  background: #ef4444;
+}
+
+/* Rating Bars Container */
+
+.container > .flex:last-child {
+  padding: 1rem;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+
+  .heading {
+    font-size: 1.1rem;
+  }
+
+  .ratingValue h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ratingSection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ratingValue {
+    border-right: none;
+    border-bottom: 1px solid #d9d9d9;
+
+    padding-bottom: 0.8rem;
+  }
+
+  .ratingInfo {
+    padding-left: 0;
+    text-align: center;
+  }
+}
