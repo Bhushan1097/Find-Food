@@ -10,12 +10,12 @@ const CustomerDashboard = () => {
             <CustomerNavbar />
 
             <Hero />
-
+            
             <Features />
 
-            <FeaturedMess/>
+            <FeaturedMess />
 
-            <Footer/>
+            <Footer />
 
         </>
     );

@@ -7,19 +7,19 @@ import {
     FaStar,
 } from "react-icons/fa";
 
-export default function MessDetailsModal({ mess, onClose }) {
+export default function MessDetailsCard({ mess, onClose }) {
     return (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex justify-end">
 
-            <div className="w-full max-w-5xl bg-white h-screen overflow-y-auto">
-
+            <div className="relative w-full max-w-5xl bg-white h-screen overflow-y-auto">
                 {/* Close */}
 
+                {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-5 left-5 bg-white rounded-full p-3 shadow-lg"
+                    className="absolute top-5 left-5 z-20 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition"
                 >
-                    <FaTimes />
+                    <FaTimes className="text-lg text-gray-700" />
                 </button>
 
                 {/* Hero */}

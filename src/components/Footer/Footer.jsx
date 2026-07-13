@@ -3,9 +3,9 @@ import footerBg from "../../assets/bg_image.png";
 
 const Footer = () => {
     return (
-        <footer className="relative overflow-hidden bg-[#F9EEE8]">
+        <footer className="relative h-[376px] overflow-hidden bg-[#F9EEE8]">
 
-            {/* Background Image with Low Opacity */}
+            {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center opacity-15"
                 style={{
@@ -16,33 +16,29 @@ const Footer = () => {
             {/* Footer Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-14">
 
                     {/* Logo */}
-                    <div>
-
+                    <div className="lg:col-span-2">
                         <img
                             src={logo}
                             alt="Find Food"
-                            className="w-36 mb-6"
+                            className="w-36"
                         />
 
-                        <p className="text-gray-700 text-lg leading-9 max-w-xs">
+                        <p className="font-poppins font-normal text-[14px] leading-[180%] text-gray-700 max-w-sm mt-2">
                             Connecting you with authentic home-cooked meals from verified
                             local chefs.
                         </p>
-
                     </div>
 
                     {/* Customers */}
                     <div>
-
-                        <h2 className="text-2xl font-bold text-[#222] mb-8">
+                        <h2 className="font-poppins font-medium text-[20px] leading-[100%] text-[#222] mb-5">
                             For Customers
                         </h2>
 
-                        <ul className="space-y-5 text-2xl text-gray-700">
-
+                        <ul className="font-poppins font-normal text-[18px] leading-[250%] text-gray-700">
                             <li className="cursor-pointer hover:text-[#D85C39] duration-300">
                                 Browse Mess
                             </li>
@@ -54,20 +50,16 @@ const Footer = () => {
                             <li className="cursor-pointer hover:text-[#D85C39] duration-300">
                                 How it Works
                             </li>
-
                         </ul>
-
                     </div>
 
-                    {/* Owner */}
+                    {/* Mess Owner */}
                     <div>
-
-                        <h2 className="text-2xl font-bold text-[#222] mb-8">
+                        <h2 className="font-poppins font-medium text-[20px] leading-[100%] text-[#222] mb-5">
                             For Mess Owner
                         </h2>
 
-                        <ul className="space-y-5 text-2xl text-gray-700">
-
+                        <ul className="font-poppins font-normal text-[18px] leading-[250%] text-gray-700">
                             <li className="cursor-pointer hover:text-[#D85C39] duration-300">
                                 Register your Shop
                             </li>
@@ -79,20 +71,16 @@ const Footer = () => {
                             <li className="cursor-pointer hover:text-[#D85C39] duration-300">
                                 Partner Dashboard
                             </li>
-
                         </ul>
-
                     </div>
 
                     {/* Support */}
                     <div>
-
-                        <h2 className="text-2xl font-bold text-[#222] mb-8">
+                        <h2 className="font-poppins font-medium text-[20px] leading-[100%] text-[#222] mb-5">
                             Support
                         </h2>
 
-                        <ul className="space-y-5 text-2xl text-gray-700">
-
+                        <ul className="font-poppins font-normal text-[18px] leading-[250%] text-gray-700">
                             <li className="cursor-pointer hover:text-[#D85C39] duration-300">
                                 Help Center
                             </li>
@@ -104,9 +92,7 @@ const Footer = () => {
                             <li className="cursor-pointer hover:text-[#D85C39] duration-300">
                                 Terms & Privacy
                             </li>
-
                         </ul>
-
                     </div>
 
                 </div>

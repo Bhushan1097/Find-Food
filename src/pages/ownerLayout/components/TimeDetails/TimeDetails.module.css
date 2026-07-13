@@ -1,0 +1,70 @@
+.heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222222;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.input {
+  width: 9rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input:focus {
+  border-color: #c85a3e;
+}
+
+.select {
+  width: 15rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+  outline: none;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.select:focus {
+  border-color: #c85a3e;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .input {
+    width: 100%;
+    max-width: 12rem;
+  }
+
+  .select {
+    width: 100%;
+    max-width: 16rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 0.95rem;
+  }
+
+  .label {
+    width: 100%;
+  }
+
+  .input,
+  .select {
+    width: 100%;
+    max-width: 100%;
+  }
+}

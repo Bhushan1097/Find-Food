@@ -1,0 +1,152 @@
+.accordion {
+  margin-bottom: 1rem;
+
+  border: 1px solid #6e6e6e;
+  border-radius: 0.75rem;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.dayTitle {
+  width: 100%;
+
+  padding: 1rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+
+  margin-right: 1rem;
+
+  transition: transform 0.3s ease;
+
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.body {
+  padding: 1.5rem;
+
+  border-top: 1px solid #d9d9d9;
+
+  background: rgba(240, 240, 240, 0.5);
+}
+
+.menuText {
+  font-size: 0.95rem;
+  color: #222222;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+
+  accent-color: #c85a3e;
+
+  cursor: pointer;
+}
+
+.checkbox:disabled {
+  cursor: not-allowed;
+}
+
+.subHeading {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input {
+  width: 18rem;
+  height: 2.75rem;
+
+  padding: 0 1rem;
+
+  border: 1px solid #6e6e6e;
+  border-radius: 0.5rem;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.input:focus {
+  border-color: #c85a3e;
+}
+
+.input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.addButton {
+  height: 2.75rem;
+
+  padding: 0 2rem;
+
+  border-radius: 0.5rem;
+
+  background: #c85a3e;
+  color: #ffffff;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.addButton:hover:not(:disabled) {
+  background: #b94d32;
+}
+
+.addButton:disabled {
+  background: #bfbfbf;
+  cursor: not-allowed;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .body {
+    padding: 1rem;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .addButton {
+    width: 8rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .dayTitle {
+    font-size: 0.95rem;
+  }
+
+  .body {
+    padding: 0.9rem;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MessCard from "./MessCard";
-import MessDetailsModal from "./MessDetailsModal";
+import MessDetailsCard from "./MessDetailsCard";
+import RatingPanel from "../Ratings/RatingsDrawer";
 
 import mess1 from "../../../assets/mess1.jpg";
 import mess2 from "../../../assets/mess2.jpg";
@@ -60,17 +61,18 @@ const messes = [
 
 export default function FeaturedMess() {
     const [selectedMess, setSelectedMess] = useState(null);
+    const [showRatingPanel, setShowRatingPanel] = useState(false);
 
     return (
         <>
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-5">
+            <section className="py-10 bg-gray-50">
+                <div className="max-w-7xl mx-auto">
 
-                    <h2 className="text-4xl font-bold mb-3">
+                    <h2 className="text-4xl font-medium mb-3">
                         Featured Mess Near You
                     </h2>
 
-                    <p className="text-gray-500 mb-10">
+                    <p className="text-[#2E2E2E] mb-10">
                         Fresh homemade food from trusted mess owners
                     </p>
 
@@ -80,6 +82,7 @@ export default function FeaturedMess() {
                                 key={index}
                                 {...mess}
                                 onMenuClick={() => setSelectedMess(mess)}
+                                onRatingClick={() => setShowRatingPanel(true)}
                             />
                         ))}
                     </div>
@@ -87,12 +90,20 @@ export default function FeaturedMess() {
                 </div>
             </section>
 
+            {/* Ratings Drawer */}
+            <RatingPanel
+                open={showRatingPanel}
+                onClose={() => setShowRatingPanel(false)}
+            />
+
+            {/* Menu Modal */}
             {selectedMess && (
-                <MessDetailsModal
+                <MessDetailsCard
                     mess={selectedMess}
                     onClose={() => setSelectedMess(null)}
                 />
             )}
+
         </>
     );
 }

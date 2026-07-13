@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+
+  padding: 1.5rem;
+
+  background: #ffffff;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 1rem;
+
+  box-shadow: 0px 1px 3px 0px #00000026;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+
+  color: #222;
+}
+
+.chart {
+  width: 100%;
+  height: 26rem;
+
+  margin-top: 1.5rem;
+}
+
+.button,
+.activeButton {
+  padding: 0.45rem 1rem;
+
+  border-radius: 0.45rem;
+
+  border: 1px solid #d9d9d9;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.button {
+  background: #ffffff;
+  color: #333;
+}
+
+.button:hover {
+  border-color: #c85a3e;
+  color: #c85a3e;
+}
+
+.activeButton {
+  background: #c85a3e;
+  color: #ffffff;
+  border-color: #c85a3e;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .chart {
+    height: 20rem;
+  }
+
+  .button,
+  .activeButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+
+  .chart {
+    height: 17rem;
+  }
+
+  .button,
+  .activeButton {
+    flex: 1;
+  }
+}
