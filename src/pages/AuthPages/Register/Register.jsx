@@ -4,11 +4,13 @@ import bg from "../../../assets/bg_image.png";
 import logo from "../../../assets/logo.png";
 import google from "../../../assets/google.svg";
 import styles from "../Login/Login.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [userType, setUserType] = useState("owner");
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div
@@ -163,8 +165,11 @@ const Register = () => {
                 <p className={styles.registerText}>
                     Already have an account?
 
-                    <span className={styles.registerLink}>
-                        {" "}
+                    <span
+                        className={styles.registerLink}
+                        onClick={() => navigate("/")}
+                        style={{ cursor: "pointer" }}
+                    >
                         Login
                     </span>
                 </p>
