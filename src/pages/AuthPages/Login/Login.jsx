@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff, RefreshCcw } from "lucide-react";
 
@@ -14,8 +14,42 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [userType, setUserType] = useState("customer");
 
-    // Handle Login Navigation
+    // Captcha State
+    const [captcha, setCaptcha] = useState("");
+    const [captchaInput, setCaptchaInput] = useState("");
+    const [captchaError, setCaptchaError] = useState("");
+
+    // Generate Captcha
+    const generateCaptcha = () => {
+        const chars =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        let result = "";
+
+        for (let i = 0; i < 6; i++) {
+            result += chars.charAt(
+                Math.floor(Math.random() * chars.length)
+            );
+        }
+
+        setCaptcha(result);
+    };
+
+    useEffect(() => {
+        generateCaptcha();
+    }, []);
+
+    // Handle Login
     const handleLogin = () => {
+        if (captchaInput.trim() !== captcha) {
+            setCaptchaError("Invalid Captcha");
+            setCaptchaInput("");
+            generateCaptcha();
+            return;
+        }
+
+        setCaptchaError("");
+
         if (userType === "owner") {
             navigate("/ownerForm/messDetails");
         } else {
@@ -50,7 +84,7 @@ const Login = () => {
                     Sign in to your account
                 </p>
 
-                {/* User Type Toggle */}
+                {/* User Type */}
                 <div className={styles.toggleContainer}>
 
                     <button
@@ -81,7 +115,6 @@ const Login = () => {
 
                 {/* Email */}
                 <div className="mb-5">
-
                     <label className={styles.label}>
                         Your Email
                     </label>
@@ -91,7 +124,6 @@ const Login = () => {
                         placeholder="abc@gmail.com"
                         className={`p-5 ${styles.input}`}
                     />
-
                 </div>
 
                 {/* Password */}
@@ -140,22 +172,37 @@ const Login = () => {
                     <input
                         type="text"
                         placeholder="Enter Captcha"
+                        value={captchaInput}
+                        onChange={(e) =>
+                            setCaptchaInput(e.target.value)
+                        }
+                        className="flex-1 px-4 outline-none bg-transparent"
                     />
 
                     <button
                         type="button"
-                        className="w-12 h-12 flex items-center justify-center"
+                        onClick={generateCaptcha}
+                        className="w-12 h-12 flex items-center justify-center hover:text-[#CF5B3E]"
                     >
                         <RefreshCcw size={20} />
                     </button>
 
-                    <div className={styles.captchaText}>
-                        kpoh89
+                    <div
+                        className={`${styles.captchaText} select-none`}
+                    >
+                        {captcha}
                     </div>
 
                 </div>
 
-                {/* Login Button */}
+                {/* Captcha Error */}
+                {captchaError && (
+                    <p className="text-red-500 text-sm mt-2">
+                        {captchaError}
+                    </p>
+                )}
+
+                {/* Login */}
                 <button
                     className={styles.loginBtn}
                     onClick={handleLogin}
@@ -176,7 +223,7 @@ const Login = () => {
 
                 </div>
 
-                {/* Google Login */}
+                {/* Google */}
                 <button className={styles.googleBtn}>
 
                     <img
